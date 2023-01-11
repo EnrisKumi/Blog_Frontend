@@ -1,4 +1,4 @@
-/* All project colors */
+/* =========== All project colors =========== */
 :root {--color-primary: #6f6af8;
     --color-primary-light: hsl(242, 91%, 69%, 18%);
     --color-primary-variant: #5854c7;
@@ -25,10 +25,10 @@
     --card-border-radius-4: 2rem;
     --card-border-radius-5: 5rem;
 }
-/* End Of all project colors */
+/* =========== End Of all project colors =========== */
 
 
-/* General Style */
+/* =========== General Style =========== */
 *{
     margin: 0;
     padding: 0;
@@ -95,10 +95,10 @@ img{
     object-fit: cover;
 }
 
-/* End Of General Style */
+/* =========== End Of General Style =========== */
 
 
-/* Nav */
+/* =========== Nav =========== */
 nav{
     background: var(--color-primary);
     width: 100vw;
@@ -173,11 +173,11 @@ nav button{
     background: var(--color-red);
     color: var(--color-bg);
 }
-/* End Nav */
+/* =========== End Nav =========== */
 
 
 
-/* Featured */
+/* =========== Featured =========== */
 .category_button{
     background: var(--color-primary-light);
     color: var(--color-primary);
@@ -231,20 +231,20 @@ nav button{
 .featured .post_thumbnail {
     height: fit-content;
 }
-/* End Featured */
+/* =========== End Featured =========== */
 
 
-/* Posts */
+/* =========== Posts =========== */
 .posts_container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 5rem;
     margin-bottom: 5rem;
 }
-/* End Posts */
+/* =========== End Posts =========== */
 
 
-/* Category */
+/* =========== Category =========== */
 .category_buttons{
     padding: 4rem 0;
     border-top: 2px solid var(--color-gray-900);
@@ -257,11 +257,11 @@ nav button{
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
 }
-/* End Category */
+/* =========== End Category =========== */
 
 
 
-/* Footer */
+/* =========== Footer =========== */
 footer{
     background: var(--color-gray-900);
     padding: 5rem 0 0;
@@ -323,11 +323,65 @@ footer ul a:hover {
     border-top: 2px solid var(--color-bg);
     margin-top: 4rem;
 }
-/* End Footer */
+/* =========== End Footer =========== */
 
 
-/* Media */
+/* =========== Search =========== */
 
+.search_bar {
+    margin-top: 7rem;
+}
+
+.search_bar-container {
+    position: relative;
+    width: 30rem;
+    background: var(--color-gray-900);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 0.6rem 1rem;
+    border-radius: var(--card-border-radius-2);
+    color: var(--color-gray-300);
+}
+
+.search_bar-container > div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.search_bar input {
+    background: transparent;
+    margin-left: 0.7rem;
+    padding: 0.5rem 0;
+    width: 100%;
+}
+
+.search_bar input::placeholder {
+    color: var(--color-gray-300);
+}
+/* =========== End Search =========== */
+
+
+/* =========== Buttons =========== */
+.btn {
+    display: inline-block;
+    width: fit-content;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--color-primary);
+    border-radius: var(--card-border-radius-2);
+    cursor: pointer;
+    transition: var(--transition);
+    color: var(--color-white);
+}
+/* =========== End Buttons =========== */
+
+
+
+/* =========== Media Queries =========== */
+
+/* Medium Devices */
 @media screen and (max-width: 1024px){
     .container{
         width: var(--container-width-md);
@@ -370,6 +424,7 @@ footer ul a:hover {
         align-items: flex-start;
         justify-content: center;
         gap: 0;
+        display: none;
     }
 
     .nav_items li {
@@ -379,6 +434,36 @@ footer ul a:hover {
         align-items: center;
         box-shadow: -2rem 3 rem 7 rem rgba(0, 0, 0, 0.7);
         border-top: 1px solid var(--color-bg);
+        animation: animateDropdown 400ms 0s ease forwards;
+        opacity: 0;
+        transform-origin: top;
+    }
+
+    .nav_items li:nth-child(2){
+        animation-delay: 200ms;
+    }
+
+    .nav_items li:nth-child(3){
+        animation-delay: 400ms;
+    }
+
+    .nav_items li:nth-child(4){
+        animation-delay: 600ms;
+    }
+
+    .nav_items li:nth-child(5){
+        animation-delay: 800ms;
+    }
+
+    /* Nav animations */
+    @keyframes animateDropdown {
+        0% {
+            transform: rotateX(90deg);
+        }
+        100% {
+            transform: rotateX(0deg);
+            opacity: 1;
+        }
     }
 
     .nav_items li a {
@@ -386,12 +471,90 @@ footer ul a:hover {
         width: 100%;
         height: 100%;
         background: var(--color-gray-900);
-        padding: 0;
+        padding: 0 2rem;
+        display: flex;
+        align-items: center;
     }
+
+    .nav_profile{
+        background: var(--color-gray-900);
+    }
+
+    .nav_profile ul{
+        top: 100%;
+        width: 100%;
+    }
+
+    .nav_profile .avatar{
+        margin-left: 2rem;
+        border: 0;
+    }
+
+    .featured_container{
+        gap: 3rem;
+    }
+
+    .posts_container{
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+    
+    .footer_container{
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+
+    /* Blog Page */
+    .search_bar-container{
+        width: 60%;
+    }
+    /* End Blog Page */
+
 
 }
 
-/* End Media */
+/* Small Devices */
+
+@media screen and (max-width: 600px) {
+    section{
+        margin-top: 2rem;
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+
+    .featured{
+        margin-top: 6rem;
+    }
+
+    .featured_container{
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .posts_container{
+        grid-template-columns: 1fr;
+    }
+
+    .category_buttons-container{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer_container{
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    /* Blog Page */
+    .search_bar-container{
+        width: var(--container-width-md)
+    }
+    /* End Blog Page */
+}
+
+/* =========== End Media Queries =========== */
 
 
 
