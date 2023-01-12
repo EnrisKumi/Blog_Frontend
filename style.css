@@ -581,6 +581,10 @@ footer ul a:hover {
     /* End Blog Page */
 
     /* Single Post */
+    .singlepost_container{
+        background-color: transparent;
+        padding: 0;
+    }
     /* End Single Post */
 }
 
