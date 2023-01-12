@@ -412,6 +412,15 @@ footer ul a:hover {
 /* =========== End Category Posts  =========== */
 
 
+/* =========== About Services Contact Page =========== */
+.empty_page {
+    height: 70vh;
+    display: grid;
+    place-content: center;
+}
+/* =========== End About Services Contact Page  =========== */
+
+
 
 /* =========== Media Queries =========== */
 
