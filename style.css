@@ -379,6 +379,30 @@ footer ul a:hover {
 
 
 
+/* =========== Single Post =========== */
+.singlepost {
+    margin: 6rem 0rem 2rem;
+}
+
+.singlepost_container {
+    width: var(--form-width);
+    background: var(--color-gray-900);
+    padding: 1rem 2rem 3rem;
+}
+
+.singlepost_thumbnail {
+    margin-top: 1.5rem 0 1rem;
+}
+
+.singlepost_container p {
+    margin: 1rem;
+    line-height: 1.7rem;
+}
+/* =========== End Single Post =========== */
+
+
+
+
 /* =========== Media Queries =========== */
 
 /* Medium Devices */
@@ -510,6 +534,9 @@ footer ul a:hover {
     }
     /* End Blog Page */
 
+    /* Single Post */
+    /* End Single Post */
+
 
 }
 
@@ -552,6 +579,9 @@ footer ul a:hover {
         width: var(--container-width-md)
     }
     /* End Blog Page */
+
+    /* Single Post */
+    /* End Single Post */
 }
 
 /* =========== End Media Queries =========== */
