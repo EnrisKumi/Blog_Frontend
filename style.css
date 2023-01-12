@@ -391,7 +391,7 @@ footer ul a:hover {
 }
 
 .singlepost_thumbnail {
-    margin-top: 1.5rem 0 1rem;
+    margin: 1.5rem 0 1rem;
 }
 
 .singlepost_container p {
@@ -400,6 +400,16 @@ footer ul a:hover {
 }
 /* =========== End Single Post =========== */
 
+
+/* =========== Category Posts =========== */
+.category_title {
+    height: 15rem;
+    margin-top: 4.5rem;
+    background: var(--color-gray-900);
+    display: grid;
+    place-items: center;
+}
+/* =========== End Category Posts  =========== */
 
 
 
