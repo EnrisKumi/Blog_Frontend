@@ -18,6 +18,17 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
     <!--End Of Style-->
   </head>
   <body>
@@ -48,7 +59,6 @@
     </nav>
     <!--End Of Navbar-->
 
-
     <section class="form_section">
       <div class="container form_section-container">
         <h2>Add Post</h2>
@@ -62,20 +72,34 @@
             <option value="2">Travel</option>
             <option value="3">Art</option>
           </select>
-          <textarea rows="10" placeholder="body"></textarea>
+          <textarea rows="10" id="summernote" placeholder="body"></textarea>
           <div class="form_control inline">
-            <input type="checkbox" id="is_featured" checked>
+            <input type="checkbox" id="is_featured" checked />
             <label for="is_featured">Featured</label>
           </div>
           <div class="form_control">
             <label for="thumbnail">Add Photo</label>
-            <input type="file" id="thumbnail">
+            <input type="file" id="thumbnail" />
           </div>
           <button class="btn" type="submit">Add Post</button>
         </form>
       </div>
     </section>
+    <script>
+      $('#summernote').summernote({
+        tabsize: 2,
+        height: 120,
+        toolbar: [
+          ['font', ['bold', 'underline', 'clear']],
+          ['color', ['color']],
+          ['para', ['ul', 'ol', 'paragraph']],
+        ],
+        
+      });
+      $('#summernote').summernote('foreColor', 'white');
 
+
+    </script>
 
     <script src="main.js"></script>
   </body>
